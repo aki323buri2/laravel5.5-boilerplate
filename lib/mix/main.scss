@@ -1,0 +1,54 @@
+@import '~bulma/bulma';
+@import '~bulma-extensions/extensions';
+
+$md-font-path: '~material-design-icons/iconfont';
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('#{$md-font-path}/MaterialIcons-Regular.eot'); /* For IE6-8 */
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url('#{$md-font-path}/MaterialIcons-Regular.woff2') format('woff2'),
+       url('#{$md-font-path}/MaterialIcons-Regular.woff') format('woff'),
+       url('#{$md-font-path}/MaterialIcons-Regular.ttf') format('truetype');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+$fa-font-path: '~@fortawesome/fontawesome-free-webfonts/webfonts';
+@import '~@fortawesome/fontawesome-free-webfonts/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free-webfonts/scss/fa-solid';
+@import '~@fortawesome/fontawesome-free-webfonts/scss/fa-regular';
+@import '~@fortawesome/fontawesome-free-webfonts/scss/fa-brands';
+
+.navbar .navbar-item .button:not(:first-child)
+{
+  @media (min-width: $desktop)
+  {
+    margin-left: 5px;
+  }
+}

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace Main\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -13,7 +13,7 @@ class MainServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        \Main\Main::boot();
     }
 
     /**
