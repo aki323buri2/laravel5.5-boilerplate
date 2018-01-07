@@ -150,8 +150,8 @@ $ tree lib
 
 配置したファイルとコピー元ファイルを編集
 
-* [lib/Main/Provider/MainServiceProvider.php](./lib/Main/Provider/MainServiceProvider.php)
-* [lib/Main/Main.php](./lib/Main/Main.php)
+* [lib/classes/Main/Providers/MainServiceProvider.php](./lib/classes/Main/Providers/MainServiceProvider.php)
+* [lib/classes/Main/Main.php](./lib/classes/Main/Main.php)
 * [webpack.mix.js](./webpack.mix.js)
 * [lib/webpack.mix.js](./lib/webpack.mix.js)
 * [lib/webpack.config.js](./lib/webpack.config.js)
