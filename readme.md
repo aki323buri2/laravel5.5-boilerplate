@@ -148,7 +148,7 @@ $ tree lib
 // 5 directories, 4 files
 ```
 
-配置したファイルとコピー元ファイルを編集
+配置したファイルと関連ファイルを編集
 
 * [lib/classes/Main/Providers/MainServiceProvider.php](./lib/classes/Main/Providers/MainServiceProvider.php)
 * [lib/classes/Main/Main.php](./lib/classes/Main/Main.php)
@@ -184,3 +184,84 @@ $ php artisan tinker
 ```
 
 
+サービスプロバイダーの登録
+
+* [/config/app.php](./config/app.php)
+
+CSSフレームワークを実装
+
+* 今回実装するライブラリ
+    - [material-design-icons](https://material.io/icons/)
+    - [fontawesome v5](https://fontawesome.com/)
+    - [bulma](https://bulma.io/)
+    - [bulma-extension](https://bulma.io/extensions/)
+* [lib/mix/main.scss](./lib/mix/main.scss)を編集
+
+Reactテストコードを記述
+
+* [lib/mix/main.js](./lib/mix/main.js)
+
+`npm run watch`
+
+```sh
+$ npm run watch
+// 
+// > @ watch /home/share/web/alpha
+// > cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=lib/webpack.config.js
+// 
+//  10% buildinggmodules 1/1 modules 0 active ...ome/share/web/alpha/lib/mix/main.scss
+// Webpack is watching the files…
+// 
+//  95% emittingtimizationzationingcessingntivee...ome/share/web/alpha/lib/mix/main.scssf
+// ...
+// (Emitted value instead of an instance of Error)   resolve-url-loader cannot operate: CSS error
+//   /home/share/web/alpha/lib/mix/main.scss:12207:3: @keyframes missing '}'
+  at error (/home/share/web/alpha/node_modules/css/lib/parse/index.js:62:15)
+//  @ ./lib/mix/main.scss 4:14-255
+//  @ multi ./lib/mix/main.js ./lib/mix/main.scss39m22m
+```
+
+`/public`ディレクトリの内容確認
+
+```sh
+$ tree public
+// public
+// ├── css
+// │   ├── app.css
+// │   └── main.css
+// ├── favicon.ico
+// ├── fonts
+// │   └── vendor
+// │       ├── @fortawesome
+// │       │   ├── fontawesome-free-webwebfa-brands-400.eot
+// │       │   ├── fontawesome-free-webwebfa-brands-400.svg
+// │       │   ├── fontawesome-free-webwebfa-brands-400.ttf
+// │       │   ├── fontawesome-free-webwebfa-brands-400.woff
+// │       │   ├── fontawesome-free-webwebfa-brands-400.woff2
+// │       │   ├── fontawesome-free-webwebfa-regular-400.eot
+// │       │   ├── fontawesome-free-webwebfa-regular-400.svg
+// │       │   ├── fontawesome-free-webwebfa-regular-400.ttf
+// │       │   ├── fontawesome-free-webwebfa-regular-400.woff
+// │       │   ├── fontawesome-free-webwebfa-regular-400.woff2
+// │       │   ├── fontawesome-free-webwebfa-solid-900.eot
+// │       │   ├── fontawesome-free-webwebfa-solid-900.svg
+// │       │   ├── fontawesome-free-webwebfa-solid-900.ttf
+// │       │   ├── fontawesome-free-webwebfa-solid-900.woff
+// │       │   └── fontawesome-free-webwebfa-solid-900.woff2
+// │       └── material-design-icons
+// │           ├── iconMaterialIcons-Regular.eot
+// │           ├── iconMaterialIcons-Regular.ttf
+// │           ├── iconMaterialIcons-Regular.woff
+// │           └── iconMaterialIcons-Regular.woff2
+// ├── index.php
+// ├── js
+// │   ├── app.js
+// │   └── main.js
+// ├── mix-manifest.json
+// └── robots.txt
+// 
+// 6 directories, 27 files
+```
+
+![welcome](./documents/images/welcome.png)
+![main-test1](./documents/images/main-test1.png)
